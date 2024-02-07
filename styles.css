@@ -1,0 +1,56 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #202124;
+}
+
+.timezone-app {
+    margin-top: 70px;
+    background-color: white;
+    width: 600px;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+#countries {
+    width: 80%;
+    height:40px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+.flex-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-x{
+    justify-content: center;
+}
+
+.s {
+    align-items: center;
+}
+
+.flex-left{
+    justify-content:start;
+}
+
+.flex-right{
+    justify-content: flex-end;
+}
+
+.wd-100{
+    width: 100%;
+}
+
+.p-relative {
+    position: relative;
+}
+.p-absolute {
+    position: absolute;
+}
