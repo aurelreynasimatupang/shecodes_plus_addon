@@ -1,20 +1,68 @@
+:root{
+    --background-color:black;
+    --hover-city-color:aliceblue;
+    --inactive-font-color:#556187;
+    --active-font-color:black;
+    --app-color:white;
+}
+
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #202124;
+    background-color:var(--background-color);
 }
 
 .timezone-app {
     margin-top: 70px;
-    background-color: white;
+    background-color: var(--app-color);
     width: 600px;
     border-radius: 12px;
-    padding: 8px;
+    padding: 15px 20px 15px 20px;
+}
+
+#city {
+    width: 80%;
+    height: 30px;
 }
 
 #countries {
     width: 80%;
     height:40px;
 }
+
+.city {
+    display: flex;
+    align-items: center;
+    margin: 15px 12px 15px 12px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 12px;
+    color: var(--inactive-font-color);
+}
+
+.city:hover {
+    background-color: var(--hover-city-color);
+    color: var(--active-font-color);
+    cursor: pointer;
+}
+
+.city h2 {
+    width: 200px;
+    text-align: left;
+}
+
+.city .date {
+    width: 100px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.city .time {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
 
 .text-center {
     text-align: center;
@@ -30,27 +78,4 @@ body {
 
 .flex-center-x{
     justify-content: center;
-}
-
-.s {
-    align-items: center;
-}
-
-.flex-left{
-    justify-content:start;
-}
-
-.flex-right{
-    justify-content: flex-end;
-}
-
-.wd-100{
-    width: 100%;
-}
-
-.p-relative {
-    position: relative;
-}
-.p-absolute {
-    position: absolute;
 }
