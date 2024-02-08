@@ -1,14 +1,16 @@
 :root{
-    --background-color:black;
-    --hover-city-color:aliceblue;
+    --background-color:#113f67;
+    --hover-city-color:#e7eaf6;
     --inactive-font-color:#556187;
-    --active-font-color:black;
+    --active-font-color:#113f67;
     --app-color:white;
+    --button-color:#a2a8d3;
 }
 
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color:var(--background-color);
+    color: var(--active-font-color);
 }
 
 .timezone-app {
@@ -27,6 +29,14 @@ body {
 #countries {
     width: 80%;
     height:40px;
+}
+#return_link {
+    color: var(--button-color);
+    font-size: 20px;
+    text-decoration: underline;
+}
+#return_link:hover {
+    cursor: pointer;
 }
 
 .city {

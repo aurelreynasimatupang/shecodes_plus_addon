@@ -600,7 +600,6 @@ updateTime();
 setInterval(updateTime,1000);
 
 // Select option filter
-
 function CityComponent(props) {
     let cityName = props.momentID.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(props.momentID);
@@ -625,9 +624,25 @@ function updateCity(event) {
         }
         displayedCity.push(timezones.find(a => a.momentID == cityTimeZone));
     }
-
-    citiesElement.innerHTML = displayedCity.map(item => CityComponent(item)).join('');
+    
+    let htmlContent = displayedCity.map(item => CityComponent(item)).join('');
+    if(cityTimeZone.length !== 0) {
+        returnLink.innerHTML = "All Cities";
+    }
+    citiesElement.innerHTML = htmlContent;
 }
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
+
+// Return to all cities button
+function resetCity(){
+    let citiesElement = document.querySelector("#cities");
+    displayedCity = mainCityArr;
+    citiesElement.innerHTML = displayedCity.map(item => CityComponent(item)).join('');
+    returnLink.innerHTML = "";
+    citiesSelectElement.value="";
+}
+
+let returnLink = document.querySelector('#return_link');
+returnLink.addEventListener("click", resetCity);
